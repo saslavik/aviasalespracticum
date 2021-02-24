@@ -74,6 +74,11 @@ export default {
 </script>
 
 <style lang="scss">
+  .searchFilter {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
   .filter {
     background-color: #fff;
     width: 300px;

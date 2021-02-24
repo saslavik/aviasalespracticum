@@ -71,6 +71,12 @@ export default {
     background-color: #fff;
     margin-bottom: 20px;
     margin-left: 16px;
+    @media screen and (max-width: 1024px) {
+      margin-left: 0;
+    }
+    @media screen and (max-width: 624px) {
+      flex-direction: column-reverse;
+    }
     &_company {
       color: #A0B0B9;
       font-size: 12px;
@@ -80,10 +86,17 @@ export default {
       border-right: 1px solid #EAEAEA;
     }
   }
+  .ticket_actions {
+    display: flex;
+    flex-direction: column;
+  }
   .ticket_button {
     width: 160px;
     margin: 22px 22px 6px 22px;
     padding: 6px;
+    @media screen and (max-width: 624px) {
+      margin: 0 auto;
+    }
   }
   .ticket_info {
     display: flex;

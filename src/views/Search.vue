@@ -50,4 +50,11 @@ export default {
       margin-top: 40px;
     }
   }
+  .main {
+    .container{
+      @media screen and (max-width: 624px) {
+        display: none;
+      }
+    }
+  }
 </style>
