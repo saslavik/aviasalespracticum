@@ -33,7 +33,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
-input, textarea, select, button { border: 1px solid $border-base; }
 
 a {
 	text-decoration: none;
@@ -79,13 +78,15 @@ section, .section {
   width: 100%;
   flex: 0 0 auto;
   position: relative;
-  max-width: 1040px;
+  max-width: 1070px;
   margin: 0 auto;
+  padding: 0 15px;
 
   @media screen and (max-width: $tableWidth) {
     max-width: 624px;
   }
   @media screen and (max-width: $phoneWidth) {
+    padding: 0 5px;
     max-width: $smPhoneWidth;
   }
 }

@@ -21,4 +21,10 @@ body {
   background-color: blue;
   height: 100vh;
 }
+button {
+  background-color: #FF9241;
+  border: none;
+  border-radius: 4px;
+  color: white;
+}
 </style>

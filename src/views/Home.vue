@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="main">
+    <div class="main main_full">
       <div class="logo">
           <div class="logoImg">
             <img src="../assets/svg/aviasales.svg" alt="">
@@ -8,7 +8,7 @@
           <p>aviasales</p>
       </div>
       <div class="container">
-        <div class="main__finder">
+        <div class="main__finder main__finder_full">
           <h2>Поиск дешевых авиабилетов</h2>
           <h6>Лучший способ купить авиабилетов дешево</h6>
           <form class="main__form">
@@ -20,7 +20,7 @@
               <input type="number" class="passangers">
             </div>
             <div class="submit">
-              <button @click.prevent="">Найти билеты</button>
+              <button @click.prevent="" class="btn_airplane">Найти билеты</button>
             </div>
           </form>
         </div>
@@ -51,7 +51,15 @@ export default {
 .main {
   background: linear-gradient(135.21deg, #00B0DE 0.36%, #01AEDC 4.04%, #02ABDB 7.77%, #02ABDB 11.48%, #02ABDB 11.7%, #196EBD 100%);
   width: 100wh;
-  height: 100vh;
+  &_full{
+    height: 100vh;
+  }
+  &__form {
+    display: flex;
+  }
+  .submit {
+    margin: 40px 0;
+  }
 }
 
 .logo {
@@ -78,10 +86,12 @@ export default {
   margin: 0 0px;
   color: white;
   text-align: center;
-  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  &_full {
+  height: 80vh;
+  }
   h2 {
     font-size: 40px;
     font-weight: bold;
@@ -105,6 +115,7 @@ export default {
   .main__form {
     display: flex;
     flex-direction: column;
+
     &_inputs {
       display: flex;
       flex-direction: row;
@@ -158,15 +169,11 @@ export default {
         }
         }
       }
-
     }
-    button {
+    
+    .btn_airplane {
       padding: 15px 50px;
-      background-color: #FF9241;
-      color: white;
       font-size: 28px;
-      border-radius: 4px;
-      border: none;
       position: relative;
       &:after {
         content: '';
@@ -181,6 +188,18 @@ export default {
 
       }
     }
+    &_search{
+      flex-direction: row;
+      button {
+        padding: 0 15px;
+        font-weight: bold;
+        font-size: 20px;
+        height: 100%;
+        margin-left: 5px;
+        white-space: nowrap;
+        text-align: center;
+      }
+      }
   }
 }
 </style>
